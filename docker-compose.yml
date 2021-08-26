@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  php-cli:
+    build:
+      context: docker
+      dockerfile: development/php-cli/Dockerfile
+    volumes:
+      - ./:/var/www
+    restart: unless-stopped
